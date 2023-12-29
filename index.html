@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <h1> Weirdle </h1>
+
+  <p> Guesses remaining: </p>
+  <p id="guesses">6</p>
+
+  <form>
+    Enter guess: <input type="text" id="guess" maxlength="5">
+    <input type="button" onclick="onSubmit()" value="Submit" id="submitButton">
+  </form>
+
+  <div id="hidden-data" data-words="" >
+
+  </div>
+  <p></p>
+
+  <table id="guessTable">
+    <tr>
+      <td>Guess1:</td>
+      <td id="G1C1">?</td>
+      <td id="G1C2">?</td>
+      <td id="G1C3">?</td>
+      <td id="G1C4">?</td>
+      <td id="G1C5">?</td>
+    </tr>
+    <tr>
+      <td>Guess2:</td>
+      <td id="G2C1">?</td>
+      <td id="G2C2">?</td>
+      <td id="G2C3">?</td>
+      <td id="G2C4">?</td>
+      <td id="G2C5">?</td>
+    </tr>
+    <tr>
+      <td>Guess3:</td>
+      <td id="G3C1">?</td>
+      <td id="G3C2">?</td>
+      <td id="G3C3">?</td>
+      <td id="G3C4">?</td>
+      <td id="G3C5">?</td>
+    </tr>
+    <tr>
+      <td>Guess4:</td>
+      <td id="G4C1">?</td>
+      <td id="G4C2">?</td>
+      <td id="G4C3">?</td>
+      <td id="G4C4">?</td>
+      <td id="G4C5">?</td>
+    </tr>
+    <tr>
+      <td>Guess5:</td>
+      <td id="G5C1">?</td>
+      <td id="G5C2">?</td>
+      <td id="G5C3">?</td>
+      <td id="G5C4">?</td>
+      <td id="G5C5">?</td>
+    </tr>
+    <tr>
+      <td>Guess6:</td>
+      <td id="G6C1">?</td>
+      <td id="G6C2">?</td>
+      <td id="G6C3">?</td>
+      <td id="G6C4">?</td>
+      <td id="G6C5">?</td>
+    </tr>
+  </table>
+
+  <p id="remarks"></p>
+
+  <script src="weirdle.js">
+  </script>
+
+</body>
+
+</html>
