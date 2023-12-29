@@ -18,12 +18,15 @@ function result(input, word) {
     }
 
     for (let i of [0,1,2,3,4]) {
-        if (word.includes(input[i])) {
-            score += 50;
-            gbo[i] =  "Orange";
-            // don't allow any further matches on this character
-            let pos = word.indexOf(input[i]);
-            word = word.slice(0,pos) + "-" + word.slice(pos + 1);
+        // if green already, don't change
+        if (gbo[i] != "Green") {
+            if (word.includes(input[i])) {
+                score += 50;
+                gbo[i] =  "Orange";
+                // don't allow any further matches on this character
+                let pos = word.indexOf(input[i]);
+                word = word.slice(0,pos) + "-" + word.slice(pos + 1);
+            }
         }
     }
 
@@ -33,6 +36,7 @@ function result(input, word) {
             gbo[i] =  "Black";
         }
     }
+
     let returnResult = [];
     returnResult.push(score);
     returnResult.push(gbo);
