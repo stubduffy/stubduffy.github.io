@@ -131,7 +131,9 @@ function handleGuess(input, guessNumber) {
         let cell = document.getElementById(`G${guessNumber}C${i}`);
         cell.textContent = input[i-1]
         cell.style.backgroundColor = answer[1][i-1];
+        cell.style.fontFamily = "monospace"
         cell.style.color = "white"
+        cell.style.textAlign = "center"
     }
     
     return [answer[1], answer[2]];
@@ -145,7 +147,7 @@ function disableSubmit() {
 
 function onSubmit() {
     let guesses = document.getElementById("guesses");
-    let guessString = document.getElementById("guess").value
+    let guessString = document.getElementById("guess").value.toLowerCase();
 
     // first check that the guessed word exists
     if (!initial_words.includes(guessString)) {
