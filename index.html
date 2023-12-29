@@ -6,14 +6,15 @@
 
 <body>
 
-  <h1> Weirdle </h1>
+  <h1 style="font-family: monospace;"> Weirdle </h1>
 
-  <p> Guesses remaining: </p>
-  <p id="guesses">6</p>
+  <p style="font-family: monospace;"> Guesses remaining: </p>
+  <p style="font-family: monospace;" id="guesses">6</p>
+  <p></p>
 
-  <form>
+  <form style="font-family: monospace;">
     Enter guess: <input type="text" id="guess" maxlength="5">
-    <input type="button" onclick="onSubmit()" value="Submit" id="submitButton">
+    <input style="font-family: monospace;" type="button" onclick="onSubmit()" value="Submit" id="submitButton">
   </form>
 
   <div id="hidden-data" data-words="" >
@@ -21,7 +22,7 @@
   </div>
   <p></p>
 
-  <table id="guessTable" style="width:60vw;">
+  <table id="guessTable" style="width:60vw;font-family: monospace;">
     <tr style="height:5vw">
       <td>Guess1:</td>
       <td id="G1C1" style="text-align:center">?</td>
@@ -72,7 +73,7 @@
     </tr>
   </table>
 
-  <p id="remarks"></p>
+  <p style="font-family: monospace;" id="remarks"></p>
 
   <script src="weirdle.js">
   </script>
