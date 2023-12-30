@@ -169,15 +169,17 @@ function onSubmit() {
 
         let remarks = document.getElementById("remarks");
 
+        // Create a new link element
+        let link = document.createElement("a");
+        link.href = `https://www.oed.com/search/dictionary/?scope=Entries&q=${answer}`;
+        link.text = `${answer}`
+
         if (!gbo.includes("Orange") && !gbo.includes("Black")) {
             disableSubmit();
-            remarks.textContent = "Hooray, you got it!";
+            remarks.textContent = "Hooray, you got it: ";
+            remarks.appendChild(link);
         } else if (newGuesses == 0) {
             disableSubmit();
-            // Create a new paragraph element
-            let link = document.createElement("a");
-            link.href = `https://www.oed.com/search/dictionary/?scope=Entries&q=${answer}`;
-            link.text = `${answer}`
             remarks.textContent = `Sorry, you're too rubbish. The word was `;
             remarks.appendChild(link);
         } else if (!gbo.includes("Green") && !gbo.includes("Orange")) {
